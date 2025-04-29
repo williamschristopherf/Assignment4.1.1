@@ -30,13 +30,13 @@
         {
             components = new System.ComponentModel.Container();
             dataGridView1 = new DataGridView();
-            bindingSource1 = new BindingSource(components);
-            personBindingSource = new BindingSource(components);
             firstNameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             lastNameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             mobilePhoneDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             workPhoneDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             addressDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            personBindingSource = new BindingSource(components);
+            bindingSource1 = new BindingSource(components);
             txtFirstName = new TextBox();
             txtLastName = new TextBox();
             txtMobile = new TextBox();
@@ -46,9 +46,14 @@
             btnDlt = new Button();
             btnSrch = new Button();
             txtSearch = new TextBox();
+            label1 = new Label();
+            label2 = new Label();
+            label3 = new Label();
+            label4 = new Label();
+            label5 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)bindingSource1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)personBindingSource).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)bindingSource1).BeginInit();
             SuspendLayout();
             // 
             // dataGridView1
@@ -61,10 +66,6 @@
             dataGridView1.Name = "dataGridView1";
             dataGridView1.Size = new Size(544, 322);
             dataGridView1.TabIndex = 0;
-            // 
-            // personBindingSource
-            // 
-            personBindingSource.DataSource = typeof(Person);
             // 
             // firstNameDataGridViewTextBoxColumn
             // 
@@ -95,6 +96,10 @@
             addressDataGridViewTextBoxColumn.DataPropertyName = "Address";
             addressDataGridViewTextBoxColumn.HeaderText = "Address";
             addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
+            // 
+            // personBindingSource
+            // 
+            personBindingSource.DataSource = typeof(Person);
             // 
             // txtFirstName
             // 
@@ -168,11 +173,61 @@
             txtSearch.Size = new Size(205, 23);
             txtSearch.TabIndex = 9;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(47, 18);
+            label1.Name = "label1";
+            label1.Size = new Size(64, 15);
+            label1.TabIndex = 10;
+            label1.Text = "First Name";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(156, 18);
+            label2.Name = "label2";
+            label2.Size = new Size(63, 15);
+            label2.TabIndex = 11;
+            label2.Text = "Last Name";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(255, 18);
+            label3.Name = "label3";
+            label3.Size = new Size(81, 15);
+            label3.TabIndex = 12;
+            label3.Text = "Mobile Phone";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(364, 18);
+            label4.Name = "label4";
+            label4.Size = new Size(72, 15);
+            label4.TabIndex = 13;
+            label4.Text = "Work Phone";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(488, 18);
+            label5.Name = "label5";
+            label5.Size = new Size(49, 15);
+            label5.TabIndex = 14;
+            label5.Text = "Address";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(label5);
+            Controls.Add(label4);
+            Controls.Add(label3);
+            Controls.Add(label2);
+            Controls.Add(label1);
             Controls.Add(txtSearch);
             Controls.Add(btnSrch);
             Controls.Add(btnDlt);
@@ -184,10 +239,10 @@
             Controls.Add(txtFirstName);
             Controls.Add(dataGridView1);
             Name = "Form1";
-            Text = "Form1";
+            Text = "Address";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)bindingSource1).EndInit();
             ((System.ComponentModel.ISupportInitialize)personBindingSource).EndInit();
+            ((System.ComponentModel.ISupportInitialize)bindingSource1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -211,5 +266,10 @@
         private Button btnDlt;
         private Button btnSrch;
         private TextBox txtSearch;
+        private Label label1;
+        private Label label2;
+        private Label label3;
+        private Label label4;
+        private Label label5;
     }
 }
